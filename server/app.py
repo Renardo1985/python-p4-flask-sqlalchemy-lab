@@ -35,10 +35,9 @@ def zookeeper_by_id(id):
     response_body = f'''
         <ul>Name: {zookeeper.name}</ul>
         <ul>Birthday: {zookeeper.birthday}</ul>
-        <ul>Animals:</ul>
     '''
     for animal in zookeeper.animals:
-        response_body += f'<ul>{animal.name} - {animal.species}</ul>'
+        response_body += f'<ul>Animal: {animal.name}</ul>'
    
     response = make_response(response_body, 200)
     return response
@@ -49,10 +48,9 @@ def enclosure_by_id(id):
     response_body = f'''
             <ul>Environment: {enclosure.environment}</ul>
             <ul>Open To Visitors: {enclosure.open_to_visitors}</ul>
-            <ul>Animal:</ul>
            '''
     for animal in enclosure.animals:
-        response_body += f'<ul>{animal.name} - {animal.species}</ul>'
+        response_body += f'<ul>Animal: {animal.name}</ul>'
    
     response = make_response(response_body, 200)
     return response
